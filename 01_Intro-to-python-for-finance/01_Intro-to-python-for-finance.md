@@ -132,11 +132,50 @@ print(pe_array)
 
 ### [Subsetting elements from an array](https://campus.datacamp.com/courses/introduction-to-python-for-finance/arrays-in-python?ex=4)
 
-### 2D arrays and functions
+```python
+# Subset the first three elements
+prices_subset_1 = prices_array[0:3]
+print(prices_subset_1)
+```
+```python
+# Subset last three elements
+prices_subset_2 = prices_array[-3:]
+print(prices_subset_2)
+```
+```python
+# Subset every third element
+prices_subset_3 = prices_array[0:7:3]
+print(prices_subset_3)
+```
+
+### [2D arrays and functions](https://campus.datacamp.com/courses/introduction-to-python-for-finance/arrays-in-python?ex=5)
 
 ### Creating a 2D array
 
-### Subsetting 2D arrays
+```python
+# Create a 2D array of prices and earnings
+stock_array = np.array([prices,earnings])
+print(stock_array)
+
+# Print the shape of stock_array
+print(stock_array.shape)
+
+# Print the size of stock_array
+print(stock_array.size)
+```
+```python
+# Transpose stock_array
+stock_array_transposed = np.transpose(stock_array)
+print(stock_array_transposed)
+
+# Print the shape of stock_array
+print(stock_array_transposed.shape)
+
+# Print the size of stock_array
+print(stock_array_transposed.size)
+```
+
+### [Subsetting 2D arrays](https://campus.datacamp.com/courses/introduction-to-python-for-finance/arrays-in-python?ex=7)
 
 ### Calculating array stats
 
