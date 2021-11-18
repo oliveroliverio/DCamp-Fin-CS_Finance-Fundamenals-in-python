@@ -51,25 +51,88 @@ This chapter is an introduction to basics in Python, including how to name varia
 
 ### Exploring list methods and functions
 
+- Sort this list
+```python
+# Print the sorted list prices
+prices = [159.54, 37.13, 71.17]
+prices.sort()
+print(prices)
+```
+
+- find max price of list
+```python
+# Find the maximum price in the list price
+prices = [159.54, 37.13, 71.17]
+price_max = max(prices)
+print(price_max)
+```
+
 ### Using list methods to add data
 
-### Finding stock with maximum price
+```python
+# Append a name to the list names
+names.append('Amazon.com')
+print(names)
 
+# Extend list names
+more_elements = ['DowDuPont', 'Alphabet Inc']
+names.extend(more_elements)
+print(names)
+```
+
+### Finding stock with maximum price
+- using index of list to find max price
+
+```python
+# Do not modify this
+max_price = max(prices)
+
+# Identify index of max price
+max_index = prices.index(max_price)
+
+# Identify the name of the company with max price
+max_stock_name = names[max_index]
+
+# Fill in the blanks
+print('The largest stock price is associated with ' + max_stock_name + ' and is $' + str(max_price) + '.')
+```
 
 ## 3 Arrays in Python
+- create arrays using the np.array() function
 
+### [Create an array](https://campus.datacamp.com/courses/introduction-to-python-for-finance/arrays-in-python?ex=2)
+```python
+# Import numpy as np
+import numpy as np
 
-### This chapter introduces packages in Python, specifically the NumPy package and how it can be efficiently used to manipulate arrays.
+# Lists
+prices = [170.12, 93.29, 55.28, 145.30, 171.81, 59.50, 100.50]
+earnings = [9.2, 5.31, 2.41, 5.91, 15.42, 2.51, 6.79]
 
-### Arrays
+# NumPy arrays
+prices_array = np.array(prices)
+earnings_array = np.array(earnings)
 
-### Create an array
+# Print the arrays
+print(prices_array)
+print(earnings_array)
+```
 
-### Elementwise operations on arrays
+### [Elementwise operations on arrays](https://campus.datacamp.com/courses/introduction-to-python-for-finance/arrays-in-python?ex=3)
+```python
+# Import numpy as np
+import numpy as np
 
-### Subsetting elements from an array
+# Create PE ratio array
+pe_array = prices_array/earnings_array
 
-2D arrays and functions
+# Print pe_array
+print(pe_array)
+```
+
+### [Subsetting elements from an array](https://campus.datacamp.com/courses/introduction-to-python-for-finance/arrays-in-python?ex=4)
+
+### 2D arrays and functions
 
 ### Creating a 2D array
 
