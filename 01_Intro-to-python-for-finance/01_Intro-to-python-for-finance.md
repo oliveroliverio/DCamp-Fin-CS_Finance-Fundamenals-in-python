@@ -514,6 +514,9 @@ plt.show()
 ### Visualizing trends
 ![](img/2021-11-25-19-36-29.png)
 ![](img/2021-11-25-19-36-40.png)
+![](img/2021-11-25-19-36-58.png)
+![](img/2021-11-25-19-37-06.png)
+
 
 ### Histogram of P/E ratios
 
