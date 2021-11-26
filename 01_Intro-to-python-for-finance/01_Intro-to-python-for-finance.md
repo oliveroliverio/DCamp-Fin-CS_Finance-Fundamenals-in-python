@@ -150,6 +150,14 @@ print(prices_subset_3)
 
 ### [2D arrays and functions](https://campus.datacamp.com/courses/introduction-to-python-for-finance/arrays-in-python?ex=5)
 
+![](img/2021-11-25-18-57-17.png)
+![](img/2021-11-25-18-57-35.png)
+![](img/2021-11-25-18-57-48.png)
+![](img/2021-11-25-18-57-58.png)
+![](img/2021-11-25-18-58-12.png)
+![](img/2021-11-25-18-58-25.png)
+![](img/2021-11-25-18-58-37.png)
+
 ### Creating a 2D array
 
 ```python
@@ -197,9 +205,37 @@ print(company_1)
 
 ### [Calculating array stats](https://campus.datacamp.com/courses/introduction-to-python-for-finance/arrays-in-python?ex=8)
 
+```python
+# Calculate the mean
+prices_mean = np.mean(prices)
+print(prices_mean)
+```
+
+```python
+# Calculate the standard deviation
+prices_std = np.std(prices)
+print(prices_std)
+```
+
 ### Generating a sequence of numbers
 
+```python
+# Create and print company_ids
+company_ids = np.arange(1, 8, 1)
+print(company_ids)
+
+# Create and print company_ids_odd
+company_ids_odd = np.arange(1, 8, 2)
+print(company_ids_odd)
+```
+
 ### Using arrays for analysis
+![](img/2021-11-25-18-54-05.png)
+![](img/2021-11-25-18-54-17.png)
+![](img/2021-11-25-18-54-38.png)
+![](img/2021-11-25-18-55-10.png)
+![](img/2021-11-25-18-55-30.png)
+
 
 ### Who's above average?
 
