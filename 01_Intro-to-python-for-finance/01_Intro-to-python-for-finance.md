@@ -400,20 +400,120 @@ plt.show()
 ### In this chapter, you will get a chance to apply all the techniques you learned in the course on the S&P 100 data.
 
 ### Introducing the dataset
+![](img/2021-11-25-19-20-14.png)
+![](img/2021-11-25-19-21-56.png)
+![](img/2021-11-25-19-22-09.png)
+![](img/2021-11-25-19-22-19.png)
+![](img/2021-11-25-19-22-42.png)
+![](img/2021-11-25-19-22-52.png)
+![](img/2021-11-25-19-23-02.png)
+![](img/2021-11-25-19-23-16.png)
+![](img/2021-11-25-19-23-28.png)
+![](img/2021-11-25-19-24-01.png)
+
 
 ### Lists
+```python
+# First four items of names
+print(names[:4])
+
+# Print information on last company
+print(names[-1:])
+print(prices[-1:])
+print(earnings[-1:])
+print(sectors[-1:])
+```
 
 ### Arrays and NumPy
+```python
+# Import numpy as np
+import numpy as np
+
+# Convert lists to arrays
+prices_array = np.array(prices)
+earnings_array = np.array(earnings)
+
+# Calculate P/E ratio
+pe = prices_array/earnings_array
+print(pe)
+```
 
 ### A closer look at the sectors
+![](img/2021-11-25-19-28-18.png)
+![](img/2021-11-25-19-28-30.png)
+![](img/2021-11-25-19-28-54.png)
+![](img/2021-11-25-19-29-02.png)
+![](img/2021-11-25-19-29-12.png)
+
+
 
 ### Filtering arrays
 
+```python
+# Create boolean array
+boolean_array = (sectors == 'Information Technology')
+
+# Subset sector-specific data
+it_names = names[boolean_array]
+it_pe = pe[boolean_array]
+
+# Display sector names
+print(it_names)
+print(it_pe)
+```
+
+```python
+# Create boolean array
+boolean_array = (sectors == 'Consumer Staples')
+
+# Subset sector-specific data
+cs_names = names[boolean_array]
+cs_pe = pe[boolean_array]
+
+# Display sector names
+print(cs_names)
+print(cs_pe)
+```
+
 ### Summarizing sector data
+```python
+# Calculate mean and standard deviation
+it_pe_mean = np.mean(it_pe)
+it_pe_std = np.std(it_pe)
+
+print(it_pe_mean)
+print(it_pe_std)
+```
+```python
+# Calculate mean and standard deviation
+cs_pe_mean = np.mean(cs_pe)
+cs_pe_std = np.std(cs_pe)
+
+print(cs_pe_mean)
+print(cs_pe_std)
+```
 
 ### Plot P/E ratios
 
+```python
+import matplotlib.pyplot as plt
+
+# Make a scatterplot
+plt.scatter(it_id, it_pe, color = 'red', label = 'IT')
+plt.scatter(cs_id, cs_pe, color = 'green', label = 'CS')
+
+# Add legend
+plt.legend()
+
+# Add labels
+plt.xlabel('Company ID')
+plt.ylabel('P/E Ratio')
+plt.show()
+```
+
 ### Visualizing trends
+![](img/2021-11-25-19-36-29.png)
+![](img/2021-11-25-19-36-40.png)
 
 ### Histogram of P/E ratios
 
