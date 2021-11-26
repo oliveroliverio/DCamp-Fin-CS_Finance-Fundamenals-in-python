@@ -195,7 +195,7 @@ company_1 = stock_array_transposed[0,:]
 print(company_1)
 ```
 
-### Calculating array stats
+### [Calculating array stats](https://campus.datacamp.com/courses/introduction-to-python-for-finance/arrays-in-python?ex=8)
 
 ### Generating a sequence of numbers
 
