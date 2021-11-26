@@ -177,6 +177,24 @@ print(stock_array_transposed.size)
 
 ### [Subsetting 2D arrays](https://campus.datacamp.com/courses/introduction-to-python-for-finance/arrays-in-python?ex=7)
 
+```python
+# Subset prices from stock_array_transposed
+prices = stock_array_transposed[:, 0]
+print(prices)
+```
+
+```python
+# Subset earnings from stock_array_transposed
+earnings = stock_array_transposed[:,1]
+print(earnings)
+```
+
+```python
+# Subset the price and earning for first company
+company_1 = stock_array_transposed[0,:]
+print(company_1)
+```
+
 ### Calculating array stats
 
 ### Generating a sequence of numbers
