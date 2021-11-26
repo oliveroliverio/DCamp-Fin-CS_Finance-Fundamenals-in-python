@@ -238,11 +238,47 @@ print(company_ids_odd)
 
 
 ### Who's above average?
+```python
+# Find the mean
+price_mean = np.mean(prices)
+
+# Create boolean array
+boolean_array = (prices > price_mean)
+print(boolean_array)
+
+# Select prices that are greater than average
+above_avg = prices[boolean_array]
+print(above_avg)
+```
 
 ### Who's in health care?
 
+```python
+# Create boolean array
+boolean_array = (sectors == 'Health Care')
+print(boolean_array)
+
+# Print only health care companies
+health_care = names[boolean_array]
+print(health_care)
+```
 
 ## 4 Visualization in Python
+
+![](img/2021-11-25-19-02-57.png)
+![](img/2021-11-25-19-03-26.png)
+![](img/2021-11-25-19-03-40.png)
+![](img/2021-11-25-19-03-49.png)
+![](img/2021-11-25-19-04-02.png)
+![](img/2021-11-25-19-04-16.png)
+![](img/2021-11-25-19-04-26.png)
+![](img/2021-11-25-19-04-48.png)
+![](img/2021-11-25-19-04-59.png)
+![](img/2021-11-25-19-05-10.png)
+![](img/2021-11-25-19-05-33.png)
+![](img/2021-11-25-19-05-43.png)
+![](img/2021-11-25-19-05-55.png)
+![](img/2021-11-25-19-06-03.png)
 
 
 ### In this chapter, you will be introduced to the Matplotlib package for creating line plots, scatter plots, and histograms.
@@ -251,7 +287,34 @@ print(company_ids_odd)
 
 ### Importing matplotlib and pyplot
 
+```python
+# Import matplotlib.pyplot with the alias plt
+import matplotlib.pyplot as plt
+
+# Plot the price of stock over time
+plt.plot(days, prices, color="red", linestyle="--")
+
+# Display the plot
+plt.show()
+```
+
 ### Adding axis labels and titles
+```python
+import matplotlib.pyplot as plt
+
+# Plot price as a function of time
+plt.plot(days, prices, color="red", linestyle="--")
+
+# Add x and y labels
+plt.xlabel('Days')
+plt.ylabel('Prices, $')
+
+# Add plot title
+plt.title('Company Stock Prices Over Time')
+
+# Show plot
+plt.show()
+```
 
 ### Multiple lines on the same plot
 
