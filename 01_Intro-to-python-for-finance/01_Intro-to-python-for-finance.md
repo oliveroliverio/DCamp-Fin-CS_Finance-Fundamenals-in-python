@@ -317,18 +317,81 @@ plt.show()
 ```
 
 ### Multiple lines on the same plot
+```python
+# Plot two lines of varying colors
+plt.plot(days, prices1, color='red')
+plt.plot(days, prices2, color='green')
+
+# Add labels
+plt.xlabel('Days')
+plt.ylabel('Prices, $')
+plt.title('Stock Prices Over Time')
+plt.show()
+```
 
 ### Scatterplots
+```python
+# Import pyplot as plt
+import matplotlib.pyplot as plt
+
+# Plot price as a function of time
+plt.scatter(days, prices, color='green', s=0.1)
+
+# Show plot
+plt.show()
+```
 
 ### Histograms
+![](img/2021-11-25-19-12-30.png)
+![](img/2021-11-25-19-12-46.png)
+![](img/2021-11-25-19-12-55.png)
+![](img/2021-11-25-19-13-04.png)
+![](img/2021-11-25-19-13-14.png)
+![](img/2021-11-25-19-13-22.png)
+![](img/2021-11-25-19-13-33.png)
+![](img/2021-11-25-19-13-42.png)
+![](img/2021-11-25-19-13-51.png)
+![](img/2021-11-25-19-14-01.png)
+![](img/2021-11-25-19-14-11.png)
+![](img/2021-11-25-19-14-20.png)
+
 
 ### What are applications of histograms in finance?
+![](img/2021-11-25-19-14-45.png)
 
 ### Is data normally distributed?
+```python
+# Plot histogram
+plt.hist(prices, bins=100)
+
+# Display plot
+plt.show()
+```
 
 ### Comparing two histograms
+```python
+# Plot histogram of stocks_A
+plt.hist(stock_A, bins=100, alpha=0.4)
+
+# Plot histogram of stocks_B
+plt.hist(stock_B, bins=100, alpha=0.4)
+
+# Display plot
+plt.show()
+```
 
 ### Adding a legend
+```python
+# Plot stock_A and stock_B histograms
+plt.hist(stock_A, bins=100, alpha=0.4, label='Stock A')
+plt.hist(stock_B, bins=100, alpha=0.4, label='Stock B')
+
+# Add the legend
+plt.legend()
+
+# Display the plot
+plt.show()
+```
 
 
 ## 5 S&P 100 Case Study
