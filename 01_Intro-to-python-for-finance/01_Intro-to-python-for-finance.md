@@ -519,8 +519,34 @@ plt.show()
 
 
 ### Histogram of P/E ratios
+```python
+# Import matplotlib.pyplot with the alias plt
+import matplotlib.pyplot as plt
+
+# Plot histogram
+plt.hist(it_pe, bins=8)
+
+# Add x-label
+plt.xlabel('P/E ratio')
+
+# Add y-label
+plt.ylabel('Frequency')
+
+# Show plot
+plt.show()
+```
 
 ### Identify the outlier
 
 ### Name the outlier
+```python
+# Identify P/E ratio within it_pe that is > 50
+outlier_price = it_pe[it_pe > 50]
+
+# Identify it_names that have PE ratio > 50
+outlier_name = it_names[it_pe > 50]
+
+# Display results
+print("In 2017, " + str(outlier_name[0]) + " had an abnormally high P/E ratio of " + str(round(outlier_price[0], 2)) + ".")
+```
 
